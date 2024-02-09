@@ -17,6 +17,7 @@
 - Modify the .env file to match your Database manager credentials.
 - Run: php artisan migrate.
 - Run: php artisan serve.
+- Run: npm install.
 - Run: npm run dev in another terminal.
 
 ## About Laravel
