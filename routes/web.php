@@ -24,13 +24,14 @@ Route::post('/logout' , [UserController::class , 'logout'])->middleware('mustBeL
 Route::get('/manage-avatar' , [UserController::class , 'showAvatarForm'])->middleware('mustBeLoggedIn');
 Route::post('/manage-avatar' , [UserController::class , 'storeAvatar'])->middleware('mustBeLoggedIn');
 
-//Posts related routes
+//Blog posts related routes
 Route::get('/create-post' , [PostController::class , 'showCreateForm'])->middleware('mustBeLoggedIn');
 Route::post('/create-post' , [PostController::class , 'createPost'])->middleware('mustBeLoggedIn');
 Route::get('/post/{post}' , [PostController::class , 'viewSinglePost']);
 Route::get('/post/{post}/edit' , [PostController::class , 'showEditForm'])->middleware('can:update,post');
 Route::put('/post/{post}' , [PostController::class , 'updatePost'])->middleware('can:update,post');
 Route::delete('/post/{post}' , [PostController::class , 'deletePost'])->middleware('can:delete,post');
+Route::get('/search/{term}' , [PostController::class , 'search']);
 
 //Profile related routes
 Route::get('/profile/{user:username}' , [UserController::class , 'profile']);

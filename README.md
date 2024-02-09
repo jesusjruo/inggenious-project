@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## How to run the project
+
+- Prerequisites: A PHP development environment installed (such as XAMPP), NodeJS, Composer, MySQL.
+- Clone the repository.
+- From the root of the project in a terminal window run "Composer update" (Make sure to have composer installed).
+- Run: php artisan php artisan key:generate
+- Create a .env file copying and pasting the .env.example already existing file and changing the name.
+- Modify the .env file to match your Database manager credentials.
+- Run: php artisan migrate.
+- Run: php artisan serve.
+- Run: npm run dev in another terminal.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
