@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FollowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,12 @@ Route::delete('/post/{post}' , [PostController::class , 'deletePost'])->middlewa
 
 //Profile related routes
 Route::get('/profile/{user:username}' , [UserController::class , 'profile']);
+Route::get('/profile/{user:username}/followers' , [UserController::class , 'profileFollowers']);
+Route::get('/profile/{user:username}/following' , [UserController::class , 'profileFollowing']);
+
+//Follow related routes
+Route::post('/follow-user/{user:username}' , [FollowController::class , 'followUser'])->middleware('mustBeLoggedIn');
+Route::post('/unfollow-user/{user:username}' , [FollowController::class , 'unfollowUser'])->middleware('mustBeLoggedIn');
 
 //Gate example
 Route::get('/admins-only' , function() {
