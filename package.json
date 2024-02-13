@@ -11,6 +11,8 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
-        "dompurify": "^3.0.8"
+        "dompurify": "^3.0.8",
+        "laravel-echo": "^1.15.3",
+        "pusher-js": "^8.4.0-rc2"
     }
 }
