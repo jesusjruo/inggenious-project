@@ -1,12 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## How to run the project
 
 - Prerequisites: A PHP development environment installed (such as XAMPP), NodeJS, Composer, MySQL.
@@ -19,6 +10,23 @@
 - Run: php artisan serve.
 - Run: npm install in another terminal.
 - Run: npm run dev after installing the packages.
+
+## Notes
+
+- If you wish to run the app without the Live chat feature and avoid aditional setup, at this point you should be able to do so after following the previous steps and stepping on the **no-chat-develop** branch from the repository.
+
+## Live chat feature
+
+In order for the Live Chat feature to work you will need the following setup:
+
+- Go to the main branch.
+- Create an FREE ACCOUNT on pusher.com and create a new project for a Laravel Backend.
+- Modify your .env file as follows:
+    - BROADCAST_DRIVER=pusher
+    - PUSHER_APP_ID={respective value from the pusher dashboard}
+    - PUSHER_APP_KEY={respective value from the pusher dashboard}
+    - PUSHER_APP_SECRET={respective value from the pusher dashboard}
+    - PUSHER_APP_CLUSTER={respective value from the pusher dashboard}
 
 ## About Laravel
 
