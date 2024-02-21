@@ -14,6 +14,7 @@
 ## Notes
 
 - If you wish to run the app without the Live chat feature and avoid aditional setup, at this point you should be able to do so after following the previous steps and stepping on the **no-chat-develop** branch from the repository.
+- To run schedule tasks: php artisan schedule:work (Only one created -> Get webpage stats).
 
 ## Live chat feature
 
